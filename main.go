@@ -116,6 +116,6 @@ func main() {
 	fileserver := http.FileServer(http.Dir(rootDoc + "/asset"))
 	http.Handle("/static/", http.StripPrefix("/static/", fileserver))
 
-	// l'adresse du serveur en local
+	// l'adresse du serveur en lo cal
 	http.ListenAndServe("localhost:666", nil)
 }
