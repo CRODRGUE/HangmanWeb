@@ -1,0 +1,64 @@
+{{define "gameplay"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/gameplay.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="styleBack">
+
+        <div id="centerContent">
+            {{if eq .Game .End}}
+            <img id="logo" src="./static/image/logoHW.png" alt="Logo du site web">
+            <div id="displayWord">
+                <p>Tu es venue sauver José, il va falloir etre fort en français {{.Nom}} !</p>
+                <p>Voici le mot à trover pour le sauver : <span id="word">{{.FindWord}}</span></p>
+            </div>
+
+            <div id="displayPanel">
+                <div id="displayInfo">
+                    <p>Mode de jeu : {{.Mode}}</p>
+                    <p>Il reste encore <span id="vie">{{.Vie}}</span> essais</p>
+                    <p>Voici les lettre que tu as déjâ mise : <br>
+                        {{.ListeLetter}}
+                    </p>
+                </div>
+                <img id="jose" src="{{.Photo}}" alt="Image de l'etats de José !">
+            </div>
+            <p>{{.Info}}</p>
+            <form action="" method="get">
+                <input type="text" name="input_letter">
+                <div id="btn">
+                    <button type="submit">Valider !</button>
+                </div>
+            </form>
+        </div>
+        <p>Développer by RODRIGUES Cyril 👀💻</p>
+        {{else}}
+        <div id="winLose">
+            <img id="logo" src="./static/image/logoHW.png" alt="Logo du site web">
+            <div id="contentDisplay">
+                <div id="info">
+                    <p>tu as terminer bravo !</p>
+                    <p>{{.Info}}</p>
+                </div>
+                <div id="nav">
+                    <a href="/gameClassique">Rejouer</a>
+                    <a href="/">Retour accueil</a>
+                </div>
+            </div>
+            <p>Développer by RODRIGUES Cyril 👀💻</p>
+        </div>
+        {{end}}
+
+    </div>
+</body>
+
+</html>
+{{end}}

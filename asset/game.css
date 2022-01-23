@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(./image/backPage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+#styleBack{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(58deg, rgba(10, 28, 249, 0.9), rgba(10, 28, 249, 0.2));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#contentTop{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;   
+}
+
+input{
+    box-sizing: border-box;
+    border: 1px solid #000;
+    padding-left: 5px;
+    color: black;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    border-radius: 15px;
+}
+
+#step2{
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#step1>*,#step2>*{
+    margin-top: 15px;
+}
+
+#step1{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#err{
+    color: red;
+    font-weight: 500;
+}
+
+
+#btn,button{
+    width: 20vw;
+    height: 5vh;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: black;
+    color: #f0f8ff;
+    border: 1px solid #000;
+    box-shadow: 19px 16px 57px 16px rgba(0,0,0,0.61);
+    text-align: center;
+}
+
+#regles{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reglesBlock{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.reglesBlock>h3{
+    color: black;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 25px; 
+    font-weight: 500;
+}
+
+.reglesBlock>p{
+    color: black;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-size: 20px; 
+}

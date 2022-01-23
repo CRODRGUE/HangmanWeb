@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./image/backPage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#backStyle{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(10, 28, 249, 0.9), rgba(10, 28, 249, 0.2));
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+#logo{
+    width: 50vw;
+    height: auto;
+}
+
+#unit{
+    position: absolute;
+    top: 50vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 25px;
+    font-family: 'Outfit', Arial, sans-serif;
+    font-weight: 400;
+    color: #f0f8ff;
+}
+
+#unit>p,#unit>a{
+    margin: 10px;
+}
+
+#unit>a{
+    width: 20vw;
+    height: 5vh;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: black;
+    color: #f0f8ff;
+    text-align: center;
+}
+
+#unit>a:hover{
+    background-color: #f0f8ff;
+    color: #000;
+}

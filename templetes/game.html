@@ -1,0 +1,65 @@
+{{define "game"}}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/game.css">
+    <title>HangMan Web, Le premier jeu du pendu realiser avec style !</title>
+</head>
+
+<body>
+    <div id="styleBack">
+        <div id="contentTop">
+            <img id="logo" src="./static/image/logoHW.png" alt="Le logo du site">
+            <h1>Bienvenu au jeu sauve jose !</h1>
+        </div>
+
+
+        <form action="./static/php/redir.php" method="get">
+            <div id="step1">
+                <p>Pour commencer à jouer indique moi ton nom de joueur, ci-dessou</p>
+                <p>Puis appuyer sur le boutton pour valider !</p>
+                <p id="err"></p>
+                <input id="id_user" type="text" name="id_joueur" onblur="getVal()">
+                <p id="btn" onclick="Step()">Etap suivante</p>
+            </div>
+
+            <div id="step2">
+                <p>Maintenant choisis le mode de jeux que tu souhaite !</p>
+                <div id="gameMode">
+                    <button id="btn1" type="submit" onsubmit='goTo("localhost:666/gameClassique")'>Mode classique</button>
+                    <button id="btn2" type="submit">Mode expert</button>
+                    <!-- <button id="btn3" type="submit">Mode multi-langues</button> -->
+                </div>
+                <div id="regles">
+                    <div class="reglesBlock">
+                        <h3>Règle du jeu :</h3>
+                        <p>A chaque erreur de lettre tu perdras un point mais attention si tu rentres un mot ou deux lettres tu perdras deux points, mais si le mot et le bon tu gagneras !</p>
+                    </div>
+                    <div class="reglesBlock">
+                        <h3>Mode Classique : </h3>
+                        <p>Tu commences avec 10 vies </p>
+                    </div>
+                    <div class="reglesBlock">
+                        <h3>Mode expert : </h3>
+                        <p>Tu commences avec 5 vies</p>
+                    </div>
+                    <div class="reglesBlock">
+                        <h3>Mode multi-langues : </h3>
+                        <p>Tu trouveras des mots Français, Anglais mais aussi Espagnol mais pas d’inquiétude tu commences avec 10 vies !</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+        <p>Développer by RODRIGUES Cyril 👀💻</p>
+    </div>
+    <script src="./static/javascript/gameInit.js"></script>
+</body>
+
+</html>
+{{end}}
