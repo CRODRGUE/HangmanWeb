@@ -18,26 +18,22 @@
         </div>
 
 
-        <form action="./static/php/redir.php" method="get">
+        <form action="/gamebis" method="get">
             <div id="step1">
                 <p>Pour commencer à jouer indique moi ton nom de joueur, ci-dessou</p>
-                <p>Puis appuyer sur le boutton pour valider !</p>
+                <p>Puis appuyer sur le boutton "valider" !</p>
                 <p id="err"></p>
                 <input id="id_user" type="text" name="id_joueur" onblur="getVal()">
-                <p id="btn" onclick="Step()">Etap suivante</p>
+                <p id="btn" onclick="Step()">Valider</p>
             </div>
 
             <div id="step2">
-                <p>Maintenant choisis le mode de jeux que tu souhaite !</p>
-                <div id="gameMode">
-                    <button id="btn1" type="submit" onsubmit='goTo("localhost:666/gameClassique")'>Mode classique</button>
-                    <button id="btn2" type="submit">Mode expert</button>
-                    <!-- <button id="btn3" type="submit">Mode multi-langues</button> -->
-                </div>
+                <p>Maintenant voici les règles des différents modes de jeux, une fois avoir pris connaissance des règles appuient sur le bouton suivant. </p>
                 <div id="regles">
                     <div class="reglesBlock">
                         <h3>Règle du jeu :</h3>
-                        <p>A chaque erreur de lettre tu perdras un point mais attention si tu rentres un mot ou deux lettres tu perdras deux points, mais si le mot et le bon tu gagneras !</p>
+                        <p>A chaque erreur de lettre tu perdras un point mais attention si tu rentres un mot ou deux lettres tu perdras deux points,<br>
+                           mais si le mot et le bon tu gagneras ! Puis je dois rajouter que les différents mot sont sans aucun accent donc par exemple un é devient un e ! </p>
                     </div>
                     <div class="reglesBlock">
                         <h3>Mode Classique : </h3>
@@ -52,6 +48,10 @@
                         <p>Tu trouveras des mots Français, Anglais mais aussi Espagnol mais pas d’inquiétude tu commences avec 10 vies !</p>
                     </div>
                 </div>
+                <div id="gameMode">
+                    <button type="submit">Suivant</button>
+                </div>
+ 
             </div>
 
         </form>

@@ -57,6 +57,10 @@ func (p hangmanData) duplicateEntry(letter string) bool {
 }
 
 func (p *hangmanData) displayJose() {
-	p.player.photo = `./static/image/` + strconv.Itoa(p.counter) + `.png`
+	if p.counter > 10 {
+		p.player.photo = `./static/image/10.png`
+	} else {
+		p.player.photo = `./static/image/` + strconv.Itoa(p.counter) + `.png`
+	}
 	fmt.Println("lien de la photo :", p.player.photo)
 }

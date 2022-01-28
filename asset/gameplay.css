@@ -85,6 +85,7 @@ form:not(input){
 }
 form>input,button,a{
     min-width: max-content;
+    padding: 5px 15px;
     box-shadow: 19px 16px 57px 16px rgba(0,0,0,0.61);
     color: #fff;
     background-color: #0a1cf9;
@@ -102,9 +103,6 @@ form>input:hover,button:hover,a:hover{
     border: solid 1px #FFF;
 }
 
-button{
-    padding: 5px 10px;
-}
 
 #word,#vie{
     color: #0a1cf9;

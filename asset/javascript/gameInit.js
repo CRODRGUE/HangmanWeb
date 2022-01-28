@@ -4,9 +4,6 @@ let setp1 = document.getElementById("step1");
 let setp2 = document.getElementById("step2");
 let err = document.getElementById("err");
 let btn = document.getElementById("btn")
-let gameClassique = document.getElementById("btn1")
-let gameExpert = document.getElementById("btn2")
-let gameMulti = document.getElementById("btn3")
 
 function getVal(){
     text = id.valeur
@@ -30,9 +27,5 @@ function Step(){
     }
 }
 
-function goTo(page){
-    console.log(page)
-    window.location.href = page
-}
 
 

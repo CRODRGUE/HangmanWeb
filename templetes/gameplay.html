@@ -14,10 +14,10 @@
     <div id="styleBack">
 
         <div id="centerContent">
-            {{if eq .Game .End}}
+            {{if .Game}}
             <img id="logo" src="./static/image/logoHW.png" alt="Logo du site web">
             <div id="displayWord">
-                <p>Tu es venue sauver José, il va falloir etre fort en français {{.Nom}} !</p>
+                <p>Tu es venue sauver José, il va falloir etre fort en devinette {{.Nom}} !</p>
                 <p>Voici le mot à trover pour le sauver : <span id="word">{{.FindWord}}</span></p>
             </div>
 
@@ -49,7 +49,7 @@
                     <p>{{.Info}}</p>
                 </div>
                 <div id="nav">
-                    <a href="/gameClassique">Rejouer</a>
+                    <a href="{{.Link}}">Rejouer</a>
                     <a href="/">Retour accueil</a>
                 </div>
             </div>

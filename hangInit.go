@@ -31,7 +31,6 @@ func (p *hangmanData) init() {
 		p.word = append(p.word, "_")
 	}
 	p.player.statu = true
-	p.counter = 10
 }
 
 func (p *hangmanData) showRandLetter() {

@@ -35,11 +35,12 @@ func hangmanMain() {
 	fmt.Println(player.counter)
 	fmt.Println("===================================================")
 
+	player.displayJose()
 	for player.checkWord() && player.counter > 0 {
 		player.checkInput()
 		player.displayJose()
 		fmt.Println(player.word)
-
 	}
-	time.Sleep(100)
+	time.Sleep(200)
+	player.player.statu = false
 }

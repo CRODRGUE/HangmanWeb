@@ -12,7 +12,7 @@ func (p *hangmanData) CheckLetter(letter string) {
 		p.player.info = "La lettre n'est pas presente dans le mot -1 essais"
 		p.counter--
 	} else {
-		p.player.info = "La lettre est pas presente dans le mot !"
+		p.player.info = "La lettre est presente dans le mot !"
 	}
 }
 
@@ -26,12 +26,10 @@ func (p *hangmanData) checkWord() bool {
 	if check && p.counter <= 0 {
 		p.player.info = "Dommage tu as depasser le nombre maximum d'essais... =( \n Le mot à trouver était : " + p.wordToFind
 		check = false
-		p.player.statu = false
-		p.player.game = "end"
+		p.player.game = ""
 	} else if !check && p.counter != 0 {
 		p.player.info = "Bravo l'aim ! tu as trouver le mot sercet... \n Qui était : " + p.wordToFind
-		p.player.statu = false
-		p.player.game = "end"
+		p.player.game = ""
 	}
 	return check
 }
