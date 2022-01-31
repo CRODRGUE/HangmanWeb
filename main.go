@@ -27,6 +27,8 @@ func main() {
 	//Page d'intialisation du jeux (Nom du joueur) (game.html)
 	http.HandleFunc("/game", func(rw http.ResponseWriter, r *http.Request) {
 		fmt.Println(r.URL)
+		player.counter = -1
+		player.letter = "err"
 		player.player.id = ""
 		templ.ExecuteTemplate(rw, "game", "")
 	})
